@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-04 01:50-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: chiloeSmart/settings.py:116
+msgid "English"
+msgstr "Ingles"
+
+#: chiloeSmart/settings.py:117
+msgid "Spanish"
+msgstr "Español"
+
+#: templates/base.html:29
+msgid "Choose your lenguage"
+msgstr "Elija su idioma"
+
+#: templates/base.html:37
+msgid "Welcome."
+msgstr "Bienvenido."
+
+#: templates/index.html:9
+msgid "What are you looking for?"
+msgstr "¿Qué andas bucando?"
+
+#: templates/index.html:13
+msgid "Landscapes"
+msgstr "Paisajes"
+
+#: templates/index.html:16
+msgid "Beachs"
+msgstr "Playas"
+
+#: templates/index.html:19
+msgid "Trails"
+msgstr "Senderos"

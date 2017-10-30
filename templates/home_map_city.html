@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+	<img src="/static/img/maps/titulo_seccion_info_ciudad.png" class="add-zindex" style="position: fixed; right: 40%; width: 250px">
+
+	<!--<a href="#" style="position: fixed; z-index: 9999; right: 0;" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>-->
+	<div class="content-menuleft">
+		<a id="eje">
+		<img src="/static/img/btn_izk_der.png">
+		</a>
+		<ul id="side-bar-left" class="side-nav fixed" style="z-index: 450; width: 270px;">
+		
+			<div class="card" style="box-shadow:none; margin: 0 !important;">
+				<div class="card-image">
+					<span class="btn-back-map grey-text text-darken-4">
+						<a href="{% url 'index_places' %}" style="padding: 0 !important; height: 0 !important;">
+							<img src="/static/img/btn_back.png">
+						</a>
+					</span>
+					<img class="activator" src="/static/img/ancud.jpg">
+				</div>
+				<div class="card-content title-menu-map-left">
+					<span class="card-title activator white-text text-darken-4">{{ ciudad_pais.0 }} <small>"Fuerte, altiva y leal"</small></span>
+				</div>
+					<p style="padding:10px;" class="grey-text text-darken-4">Ancud es una comuna y ciudad chilena, ubicada en la Provincia de Chiloé, Región de Los Lagos. Se encuentra a 1.132 km de Santiago. Es el primer asentamiento urbano de importancia en Chiloé, viniendo desde el norte.</p>
+			</div>
+
+		</ul>
+	</div>
+	<div id="hola"></div>
+	<div id="maps" class="height-full">
+		<div id="div-img"></div>
+		<div id="btn_menu_map" class="fixed btn_menu_map">
+		    <a class="btn_menu_opcion">
+		   		<img src="/static/img/btn_menu_opcionea.png">
+		    </a>
+		</div>
+	</div>
+	
+	<div id="container-menu-map-places" class="container-menu-map-places">
+		<div id="menu-map-places" class="menu-map-places" style="display: none;">
+			<div class="row">
+				<div class="col s4">
+					<ul class="collection" style="margin:0; border: 0;">
+						<li class="collection-item avatar" style="background: none; min-height: 62px; line-height: 3rem;">
+							<img src="/static/img/maps/icons_rounds/icon_beach_round.png" alt="" class="circle">
+							<span class="title"><a id="btn_addelete_beach" href="#" estadoMarkers="agregados">Playas</a></span>
+						</li>
+					</ul>
+					<ul class="collection" style="margin:0; border: 0;">
+						<li class="collection-item avatar" style="background: none; min-height: 62px; line-height: 3rem;">
+							<img src="/static/img/maps/icons_rounds/icon_hoteles_round.png" alt="" class="circle">
+							<span class="title"><a id="btn_addelete_hotels" href="#" estadoMarkers="agregados">Hoteles</a></span>
+						</li>
+					</ul>
+					<ul class="collection" style="margin:0; border: 0;">
+						<li class="collection-item avatar" style="background: none; min-height: 62px; line-height: 3rem;">
+							<img src="/static/img/maps/icons_rounds/icon_rentacar_round.png" alt="" class="circle">
+							<span class="title"><a id="btn_addelete_rentacar" href="#" estadoMarkers="agregados">Rent a Car</a></span>
+						</li>
+					</ul>
+				</div>
+				<div class="col s4">
+					<ul class="collection" style=" margin:0; border: 0;">
+						<li class="collection-item avatar" style="background: none; min-height: 62px; line-height: 3rem;">
+							<img src="/static/img/maps/icons_rounds/icon_cabanas_round.png" alt="" class="circle">
+							<span class="title"><a id="btn_addelete_cabanas" href="#" estadoMarkers="agregados">Cabañas</a></span>
+						</li>
+					</ul>
+					<ul class="collection" style=" margin:0; border: 0;">
+						<li class="collection-item avatar" style="background: none; min-height: 62px; line-height: 3rem;">
+							<img src="/static/img/maps/icons_rounds/icon_landscape_round.png" alt="" class="circle">
+							<span class="title"><a id="btn_addelete_landscapes" href="#" estadoMarkers="agregados">Paisajes</a></span>
+						</li>
+					</ul>
+					<ul class="collection" style=" margin:0; border: 0;">
+						<li class="collection-item avatar" style="background: none; min-height: 62px; line-height: 3rem;">
+							<img src="/static/img/maps/icons_rounds/icon_trail_round.png" alt="" class="circle">
+							<span class="title"><a id="btn_addelete_trails" href="#" estadoMarkers="agregados">Senderos</a></span>
+						</li>
+					</ul>
+				</div>
+				<div class="col s4">
+					<ul class="collection" style="margin:0; border: 0;">
+						<li class="collection-item avatar" style="background: none; min-height: 62px; line-height: 3rem;">
+							<img src="/static/img/maps/icons_rounds/icon_restaurantes_round.png" alt="" class="circle">
+							<span class="title"><a id="btn_addelete_restaurant" href="#" estadoMarkers="agregados">Restaurantes</a></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+    {% block otherscripts %}
+		
+    {% endblock %}
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+	<!--<div class="center-box tittle-place">Playas</div>!-->
+
+	<div class="row valign-wrapper padding-item no-margin-bottom">
+		<div class="col s4 m4 valign">
+			<a href="{% url 'index_places' %}">
+				<img src="/static/img/btn_back.png" class="responsive-img">
+			</a>
+		</div>
+		<div class="col s4 m4 center center-title-img"><img src="/static/img/playas.png"></div>
+		<div class="col s4 m4">
+			<p class="center"></p>
+		</div>
+	</div>
+	
+	<div class="carousel carousel-slider height-carousel">
+		{% for playa in playas %}
+			<div class="carousel-item padding-item">
+				<div class="row-left info-place left">
+					<h3 class="parrato-titulo">{{ playa.name}}</h3>
+					<p class="parrafo-info">{{ playa.description }}</p>
+				</div>
+				<div class="row-center left">
+					<img class="img-row-center-border" src="/static/img/borde_foto_principal.png">
+					<img class="img-row-center" src="/{{playa.img_refer}}">
+				</div>
+				<div class="row-right right">
+					{% for img in playa.img_place.all %}
+						<div class="row row-small-img {% cycle 'text-left' 'text-right'%}">
+							<img class="small-img-panel-border" src="/static/img/borde_fotos_chicas.png">
+							<img class="{% cycle 'small-img-panel' 'small-img-panel-right' %}" src="/{{img.image}}">
+						</div>	
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	
+	<div class="hand-slide">
+		<img src="/static/img/deslizatusmanos.png">
+	</div>
+
+	{% block otherscripts %}
+		<script type="text/javascript" src="/static/js/timeinterval.js"></script>
+	{% endblock %}
+
+
+{% endblock %}
